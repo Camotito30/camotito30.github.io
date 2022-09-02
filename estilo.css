@@ -119,10 +119,50 @@ h1 {
 }
 
 code {
-  color: #e4cb58;
-  font: inherit;
+color: #e4cb58;
+font: inherit;
 }
-.crd {
-    text-align: left;
 
-} 
+/* Fuentes */
+@import url(https://fonts.googleapis.com/css?family=Titan+One);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+/* Fondo */
+body,
+.core{background:#171E2E;padding:.3em 0 2em}
+/* Estilo de Letras */
+.ti{
+  font-family: 'Pacifico', sans-serif;
+  position: absolute;
+  font-weight: 400;
+  left: 60%; 
+  top: -20px;
+  width: 500px;
+  margin-left: -900px;
+  text-shadow: 0 1px 3px rgba(black, 0.75);
+  color: white;
+  font-size: 50px;
+  transform: rotate(-7deg);
+  
+}
+
+.tu{
+  font-family: 'Titan One', sans-serif;
+  position: absolute;
+  font-weight: 400;
+  left: 40%; 
+  top: 20px;
+  width: 500px;
+  margin-left: -550px;
+  text-shadow: 0 1px 3px rgba(black, 0.75);
+  color: yellow;
+  font-size: 50px;
+  transform: rotate(-7deg);
+  
+}
+.mambo {
+    position: relative;
+    left: 40px;
+    top: -10px;
+    width: 50px;
+    
+}
