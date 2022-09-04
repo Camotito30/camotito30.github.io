@@ -6,7 +6,7 @@ body{
   }
   
   .gallery{
-    margin-top: -300px;
+    margin-top: -90px;
     position:relative;
     width:300px;
     height:200px;
@@ -360,10 +360,8 @@ body{
     margin-top: 0px;
     font-size: 100px;
   }
-  .boton {
-    margin-left: 10px;
-    margin-top: -650px;
-    border-color: #E50914;
-    border-radius: 10%;
 
+  .audio {
+    margin-top: -950px;
+    margin-left:-20px;
   }
