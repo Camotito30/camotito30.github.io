@@ -6,7 +6,7 @@ body{
   }
   
   .gallery{
-    margin-top: -200px;
+    margin-top: -400px;
     position:relative;
     width:310px;
     height:200px;
@@ -74,7 +74,7 @@ body{
     text-align: center;
   }
   .text2 {
-    margin-top: -50px;
+    margin-top: -200px;
     left: 150px;
     font-size: 50px;
   }
