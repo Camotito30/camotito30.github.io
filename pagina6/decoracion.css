@@ -121,4 +121,16 @@ transform: translateX(30px);
 {
     margin-top: -700px;
     margin-left: -1 00px;
+    padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-color:#F69DA1;
+  border-width: 3px;
+  background-color:#f2595e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
 }

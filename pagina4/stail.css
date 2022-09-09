@@ -124,3 +124,17 @@ p{
   margin-top:auto  ;
   margin-left: 900px;
 }
+.regresar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-color:#F69DA1;
+  border-width: 3px;
+  background-color:#f2595e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+}
