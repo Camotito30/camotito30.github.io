@@ -1,102 +1,73 @@
-/* Common */
-* { box-sizing: border-box;}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: sans-serif;
-    background-color: lighgray;
+:root {
+    --color_1: #a5a7bb;
+    --color_2: #a496a4;
+    --color_3: #554d73;
+  }
+  
+  body {
+    background-image: url("https://media2.giphy.com/media/UItEdFBIF8Rna/giphy.gif?cid=ecf05e47t29wbitb8cqhqd7eqelkem3hlve4jextedoyftcg&rid=giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: "Rowdies", cursive;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Player */
-.player {
-    min-width: 320px;
-    background-image: linear-gradient(
-black, 
-gray);
-    border-radius: 1rem;
-    padding: 2rem;
-    color: 
-white;
-    box-shadow: 2px 2px 3px 
-black;
-}
-
-/* Title */
-.title {
-    margin-top: 0;
-    text-align: center;
-}
-
-/* Cover */
-.cover {
-    width: 128px;
-    height: auto;
-    border-radius: .3rem;
-    display: block;
-    margin: 0 auto 1rem auto;
-}
-
-/* Progress */
-.progress-container {
-    height: .6rem;
-    background-color: 
-lightgray;
-    margin-bottom: 1rem;
-}
-
-.progress {
-    background-color: 
-goldenrod;
-    width: 0;
-    height: 100%;
-}
-
-/* Controls */
-.controls {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1rem;
-}
-
-.controls button {
-    background-color: transparent;
-    border: none;
-}
-
-.controls i {
-    font-size: 1.7rem;
-    color: 
-white;
-}
-
-/* Songs */
-.songs {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.songs li {
-    margin-bottom: 1rem;
-}
-
-.songs a {
-    color: 
-lightgray;
-    text-decoration: none;
-}
-
-.songs a.active {
-    color: 
-white;
-    font-weight: bold;
-}
-
-
+  }
+  
+  .bg {
+    background-color: var(--color_1);
+    animation: color_rotate_bg 5s infinite;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  h1 {
+    color: var(--color_3);
+    animation: color_rotate_fg 5s infinite;
+    font-size: 20vh;
+    text-shadow: 5px 5px var(--color_2);
+  }
+  
+  @keyframes color_rotate_bg {
+    0% {
+      background-color: var(--color_1);
+    }
+    33% {
+      background-color: var(--color_2);
+    }
+    66% {
+      background-color: var(--color_3);
+    }
+    100% {
+      background-color: var(--color_1);
+    }
+  }
+  
+  @keyframes color_rotate_fg {
+    0% {
+      color: var(--color_3);
+      text-shadow: 5px 5px var(--color_2);
+    }
+    33% {
+      color: var(--color_1);
+      text-shadow: 5px 5px var(--color_3);
+    }
+    66% {
+      color: var(--color_2);
+      text-shadow: 5px 5px var(--color_1);
+    }
+    100% {
+      color: var(--color_3);
+      text-shadow: 5px 5px var(--color_2);
+    }
+  }
+  
 
