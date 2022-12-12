@@ -1,35 +1,157 @@
-.gallery {
-  --n: 1; /* number of rows*/
-  --m: 5; /* number of columns */
-  --g: 0px;  /* control the gap */
-  --f: .8;   /* control the scale factor */
-  
-  display: grid;
-  gap: var(--g);
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: repeat(var(--m),auto);
-}
-
-.gallery > img {
-  width: 0;
-  height: 0;
-  min-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  cursor: pointer;
-  filter: grayscale(80%);
-  transition: .35s linear;
-}
-
-.gallery img:hover{
-  filter: grayscale(0);
-  width:  calc(100vh*var(--f)/var(--n));
-  height: calc(100vw*var(--f)/var(--m));
-}
-
-
-body {
+* {
   margin: 0;
-  background: #60c4ff;
+  padding: 0;
+}
+body {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #434b4d;
+}
+.cuadro {
+  position: Relative;
+  height: 15rem;
+  width: 20rem;
+  background: #ceced9;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+.cuadro:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.close,
+.closeg,
+.closey {
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+  font-family: verdana;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: CenteR;
+  cursor: pointer;
+  top: 0.3rem;
+
+  transition: 0.3s;
+  padding: 0;
+}
+.closeg {
+  background: #27c93f;
+  right: 3.7rem;
+}
+.closey {
+  background: #ffbd2e;
+  right: 2rem;
+}
+.close {
+  background: #ff5f56;
+  right: 0.3rem;
+}
+.close:hover {
+  color: transparent;
+  background: transparent;
+}
+
+.titulo {
+  position: Relative;
+  margin-top: 1rem;
+  font-family: verdana, sans-serif;
+  text-align: CenteR;
+}
+button {
+  height: 4rem;
+  width: 4rem;
+  background: #ff3390;
+  border: none;
+  font-size: 2rem;
+  font-family: verdana, sans-serif;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+.op1,
+.op2 {
+  top: 2rem;
+  position: Relative;
+  margin-left: 3rem;
+}
+.op2 {
+  transition: 0.1s;
+}
+.op2:hover {
+  color: transparent;
+  transform: scale(1.2);
+}
+
+.op2:hover:after {
+  position: absolute;
+  content: "SÍ";
+  left: 1rem;
+  color: black;
+  font-weight: bold;
+}
+.op1 {
+  top: 1.2rem;
+  transition: 0.5s;
+}
+.op1:hover {
+  transform: rotate(45deg);
+}
+.op1:hover:before,
+.op1:hover:after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #ff3390;
+  z-index: -1;
+}
+.op1:hover:before {
+  top: 0rem;
+  left: -2rem;
+}
+.op1:hover:after {
+  top: -2rem;
+  right: 0;
+}
+span {
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span:hover {
+  top: -0.5rem;
+  left: -0.5rem;
+  font-weight: bold;
+  transform: rotate(-45deg) scale(1.2);
+}
+.op1:hover:focus {
+  animation: latido 1s infinite linear;
+}
+@keyframes latido {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
 }
